@@ -1,0 +1,169 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/github-dark.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Gregs-sgcraft-stargate-program-nl-explanation</title>
+  <meta name="description" content="With this program you can use your Computer (in mc) to control your stargate!">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Gregs-sgcraft-stargate-program-nl-explanation</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">With this program you can use your Computer (in mc) to control your stargate!</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/jdvr14vroeg/Gregs-SGcraft-Stargate-Program-nl-explanation/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/jdvr14vroeg/Gregs-SGcraft-Stargate-Program-nl-explanation/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/jdvr14vroeg/Gregs-SGcraft-Stargate-Program-nl-explanation" class="code">View Gregs-sgcraft-stargate-program-nl-explanation on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <p>sg = peripheral.find("stargate")
+local param1, param2, param3 = os.pullEvent()</p>
+
+<p>e = Main()
+-- Dit is het hoofd programa, vanaf hier kun je kiezen waar je heen gaat!</p>
+
+<p>i = Iris()
+    i1 = IrisOpen()
+        i2 = IrisClosed()
+-- Dit is 1 Iris onderdeel met meerdere functies.</p>
+
+<p>d = DialCheck()
+    d1 = Idle()
+        d2 =- Connected()
+-- Dit is het Dial onderdeel, hier kun je zorgen dat hij connect of disconnect.</p>
+
+<p>c = SystemCheck()
+-- Hier kun je een systemcheck doen en kijken naar de SG state.</p>
+
+<p>print("Type in the correct password in order to use the program.")
+print("Password:")</p>
+
+<p>if read == "StargateCommand" then
+e
+else
+shell.reboot()
+end</p>
+
+<p>function Main()
+print("Here you can choose the Function you want to use:
+print("[1]: Dial, [2]: Iris, [3]: SystemCheck, [4]: Disconnect Stargate")
+print()
+print("For [1] Type 1")
+print("For [2] Type 2")
+print("For [3] Type 3")
+print("For [4] Type 4")</p>
+
+<p>if read() == "1" then
+d
+    elseif read() == "2" then
+    i
+        elseif read() == "3" then
+        c
+            elseif read() == "4" then
+            sg.disconnect()
+end</p>
+
+<p>function DialCheck()
+if sg.stargateState() == "Idle" then
+d1
+    elseif sg.stargateState() == "Connected" then
+    d2
+end</p>
+
+<p>function Idle()
+print("Type in the Stargate Address that you are trying to reach.")
+sg.dial(read())
+sg.closeIris()
+sleep(20)
+sg.openIris()
+e</p>
+
+<p>function Connected()
+print("The Stargate is in use, in order to use it you need to disconnect first.")
+e</p>
+
+<p>function Iris()
+if sg.irisState() == "Opened" then
+i1
+    elseif sg.irisState() == "Closed" then
+    i2
+end</p>
+
+<p>function IrisOpen()
+print("type close in order to close the Iris, if you do not want to close it type exit")
+if read() == "close" then
+sg.closeIris()
+print("Have a nice day!")
+e
+    elseif read() == "exit" then 
+    print("Okay, your chose Have a nice day!")
+    e
+end</p>
+
+<p>function IrisClosed()
+print("In order to open the Iris type open, if you do not want to open it type exit")
+if read() == "open" then
+sg.openIris()
+print("Have a nice day!")
+e
+    elseif read() == "exit" then 
+    print("Okay, your chose Have a nice day!")
+    e
+end</p>
+
+<p>function SystemCheck()
+print(sg.stargateState)
+print(sg.irisState)
+print(sg.energieState)</p>
+
+<p>end
+end
+end
+end
+end
+end
+end
+end</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/jdvr14vroeg" class="avatar"><img src="https://avatars3.githubusercontent.com/u/15638611?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/jdvr14vroeg">jdvr14vroeg</a> maintains <a href="https://github.com/jdvr14vroeg/Gregs-SGcraft-Stargate-Program-nl-explanation">Gregs-sgcraft-stargate-program-nl-explanation</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/jdvr14vroeg/Gregs-SGcraft-Stargate-Program-nl-explanation/tarball/master" class="tar">tar</a><a href="https://github.com/jdvr14vroeg/Gregs-SGcraft-Stargate-Program-nl-explanation/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
